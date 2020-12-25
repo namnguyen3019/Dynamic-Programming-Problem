@@ -15,8 +15,8 @@ def canConstruct(target, words, memo={}):
 
     for word in words:
         if word == target[:len(word)]:
-            target = target[len(word):]
-            if canConstruct(target, words):
+            suffix = target[len(word):]
+            if canConstruct(suffix, words):
                 memo[target] = True
                 return memo[target]
     memo[target] = False
