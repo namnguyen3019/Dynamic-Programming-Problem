@@ -19,3 +19,9 @@ def howSum(target, numbers):
 
 print(howSum(7, [2,3,4]))
 print(howSum(300, [7, 14]))
+
+# m = target sum
+# n = length of the number list
+# Brute Force
+# Time complexity: O(n^m*m)
+# Space complexity: O(m^2)

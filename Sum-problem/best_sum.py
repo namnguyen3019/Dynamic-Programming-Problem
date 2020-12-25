@@ -26,5 +26,5 @@ def bestSum(target, numbers):
 
 print(bestSum(7, [2,3,4]))
 print(bestSum(9, [1, 2, 3, 4]))
-print(bestSum(300, [7, 14]))
+# print(bestSum(300, [7, 14]))
 

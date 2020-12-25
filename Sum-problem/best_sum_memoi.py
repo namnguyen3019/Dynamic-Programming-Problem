@@ -30,3 +30,13 @@ print(bestSum(7, [2,3,4]))
 print(bestSum(9, [1, 2, 3, 4]))
 print(bestSum(300, [7, 14]))
 
+# m = target
+# n = the length of number list
+
+# Brute Force
+# Time Complexity: O(n^m*m)
+# Space Complexity  O(m^2)
+
+# Memoization
+# Time Complexity: O(n*m^2)
+# Space Complexity: O(m^2)

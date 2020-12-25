@@ -4,7 +4,9 @@
     Can use any number in the list multiple times.
 
 '''
-
+# Using memoization
+# Time complexity:
+# Space complexity:
 def canSum(target, numbers, memo={}):
     
     if target in memo: return memo[target]
