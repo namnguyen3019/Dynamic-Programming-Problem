@@ -1,6 +1,8 @@
 '''
     Fibonacci using simple recursive 
 '''
+# Time complexity: O(2^n)
+# Space complexity: O(n)
 
 def fib(n):
     if n < 0: return 

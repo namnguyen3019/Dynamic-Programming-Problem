@@ -4,6 +4,8 @@
     How many ways to travel from top-left corner to bottom-right corner
 
 '''
+# Time complexity: O(2^(m+n))
+# Time complexity: O(m+n)
 def gridTraveler(m,n):      # m: number of column, n: number of row
     if m == 0 or n == 0: return 0
     if m == 1 or n == 1: return 1
