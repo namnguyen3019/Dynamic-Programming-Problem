@@ -5,29 +5,32 @@
 '''
 
 
-def allConstruct(target, words, memo={}):
+def allConstruct(target, words):
 
-    if target in memo: return memo[target]
-    if target == '': return [[]]
-    result = []
-    for word in words:
-        if target.find(word) == 0:
-            suffix = target[len(word):]
-            # Ways to build suffix
-            suffixWays = allConstruct(suffix, words)
+    table = [[] for i in range(len(target)+1)]
 
-            targetWays = list(map(lambda way: [word] + way, suffixWays))
+    # There is 1 way to construc empty list: 
+    # Assign table[0] to empty list
 
-            for elem in targetWays:
-                result.insert(0, elem)
-    memo[target] = result
-    return result
+    table[0] = [[]]
+
+    for i in range(len(target)):
+        for word in words:
+            if target[i:].find(word) == 0:
+                if i + len(word) <= len(target):
+                    for way in table[i]:
+                        newCombination = way + [word]
+                        table[i+len(word)].append(newCombination)
+    
+    return table[len(target)]
+                
+    
 
 print(allConstruct('purple', ['purp', 'p', 'ur', 'le', 'purpl']))
 print(allConstruct('skateboard', ['ska', 'teb', 'oar', 'd']))
 print(allConstruct('google', ['go', 'oo', 'gle','o']))
 print(allConstruct('abcdef', ['ab', 'abc', 'cd', 'def', 'abcd', 'ef', 'c']))
-print(allConstruct('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaf', ['a', 'aa','aaa', 'aaaa', 'aaaaaa']))
+print(allConstruct('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaf', ['a', 'aa','aaa', 'aaaa', 'aaaaa']))
 
 # def bestConstruct(target, words):
 #     allWays = allConstruct(target, words)

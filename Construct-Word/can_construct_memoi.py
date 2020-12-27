@@ -22,7 +22,7 @@ def canConstruct(target, words, memo={}):
     memo[target] = False
     return memo[target]
 
-print(canConstruct('skateboard', ['bo', 'rd', 'ate', 'sk']))
-print(canConstruct('skateboard', ['ska', 'teb', 'oar', 'd']))
-print(canConstruct('google', ['go', 'oo', 'gle','o']))
+print(canConstruct('skateboard', ['bo', 'rd', 'ate', 'sk']))    #False
+print(canConstruct('skateboard', ['ska', 'teb', 'oar', 'd']))   # False
+print(canConstruct('google', ['go', 'oo', 'gle','o']))          # True
 print(canConstruct('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaf', ['aaa', 'a', 'aa', 'aaaa','aaaaaa', 'aaaaa']))

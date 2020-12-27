@@ -23,4 +23,4 @@ def canSum(target, numbers):
 print(canSum(7, [2,4]))     # False
 print(canSum(100, [1,2,4])) # True
 print(canSum(300, [7, 14])) # False
-print(canSum(100, [5, 10, 15, 20]))
+print(canSum(100, [5, 10, 15, 20])) # True

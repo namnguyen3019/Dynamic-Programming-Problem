@@ -1,3 +1,9 @@
+'''
+    Problem description:
+    Given 2D grid. You can only move down or right each time.
+    How many ways to travel from top-left corner to bottom-right corner of the grid
+
+'''
 
 def gridTraveler(m, n):
 
